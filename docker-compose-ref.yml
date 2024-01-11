@@ -1,0 +1,11 @@
+version: "2"
+services:
+  node-app:
+    container_name: aydin-app-container
+    build: .
+    volumes:
+      - ./src:/app/src:ro
+    ports:
+      - "3003:3003"
+    env_file:
+      - ./.env
